@@ -10,3 +10,7 @@ private:
 public:
 
 };
+
+private:
+    double d1, d2;
+    double sisi1, sisi2;
