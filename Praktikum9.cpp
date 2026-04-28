@@ -64,3 +64,9 @@ int main() {
 //Lengkapi disini
 LayangLayang ObjectLayang;
 BelahKetupat ObjectBelah;
+ObjectLayang.inputData();  
+ObjectBelah.inputData();  
+
+cout << "\n--- Hasil luas ---" << endl;  
+cout << "Luas Layang-Layang     : " << ObjectLayang.hitungLuas() << endl;  
+cout << "Luas Belah Ketupat     : " << ObjectBelah.hitungLuas() << endl;
