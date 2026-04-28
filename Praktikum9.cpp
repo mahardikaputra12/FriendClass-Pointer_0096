@@ -60,3 +60,8 @@ void tampilkanKeliling(LayangLayang l, BelahKetupat b) {
     cout << "Keliling Layang-Layang : " << kelilingLayang << endl;  
     cout << "Keliling Belah Ketupat : " << kelilingBelah << endl;
 }
+LayangLayang ObjectLayang;
+    BelahKetupat ObjectBelah;
+
+    ObjectLayang.inputData();  
+    ObjectBelah.inputData();
