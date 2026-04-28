@@ -4,69 +4,83 @@
 using namespace std;
 
 class BelahKetupat;
+
 class LayangLayang {
 private:
+//Lengkapi disini
+double d1, d2;
+double sisi1, sisi2;
 
 public:
+void inputData() {
+cout << "Input Layang-Layang\n";
+cout << "Diagonal 1: "; cin >> d1;
+cout << "Diagonal 2: "; cin >> d2;
+cout << "Sisi 1: "; cin >> sisi1;
+cout << "Sisi 2: "; cin >> sisi2;
+}
+
+double hitungLuas() {  
+    return 0.5 * d1 * d2;  
+}  
+
+//Lengkapi disini  
+friend void tampilkanKeliling(LayangLayang, BelahKetupat);
 
 };
-
-private:
-    double d1, d2;
-    double sisi1, sisi2;
-
-public:
-    void inputData() {
-        cout << "Input Layang-Layang\n";
-        cout << "Diagonal 1: "; cin >> d1;
-        cout << "Diagonal 2: "; cin >> d2;
-        cout << "Sisi 1: "; cin >> sisi1;
-        cout << "Sisi 2: "; cin >> sisi2;
-    }
-    double hitungLuas() {  
-        return 0.5 * d1 * d2;  
-    }
 
 class BelahKetupat {
 private:
+//Lengkapi disini
+double d1, d2;
+double sisi;
 
 public:
+void inputData() {
+//Lengkapi disini
+cout << "\nInput Belah Ketupat\n";
+cout << "Diagonal 1: "; cin >> d1;
+cout << "Diagonal 2: "; cin >> d2;
+cout << "Sisi: "; cin >> sisi;
+}
+
+double hitungLuas() {  
+    return 0.5 * d1 * d2;  
+}  
+
+//Lengkapi disini  
+friend void tampilkanKeliling(LayangLayang, BelahKetupat);
 
 };
 
-private:
-    double d1, d2;
-    double sisi;
+//Lengkapi disini
+void tampilkanKeliling(LayangLayang l, BelahKetupat b)
+{
+double kelilingLayang = 2 * (l.sisi1 + l.sisi2);
+double kelilingBelah = 4 * b.sisi;
 
+cout << "\n--- Keliling ---" << endl;  
+cout << "Keliling Layang-Layang : " << kelilingLayang << endl;  
+cout << "Keliling Belah Ketupat : " << kelilingBelah << endl;
 
-public:
-    void inputData() {
-        cout << "\nInput Belah Ketupat\n";
-        cout << "Diagonal 1: "; cin >> d1;
-        cout << "Diagonal 2: "; cin >> d2;
-        cout << "Sisi: "; cin >> sisi;
-    }
-    double hitungLuas() {  
-        return 0.5 * d1 * d2;  
-    }
-    
-    friend void tampilkanKeliling(LayangLayang, BelahKetupat);
-    
-void tampilkanKeliling(LayangLayang l, BelahKetupat b) {
-    double kelilingLayang = 2 * (l.sisi1 + l.sisi2);
-    double kelilingBelah = 4 * b.sisi;
-
-    cout << "\n--- Keliling ---" << endl;  
-    cout << "Keliling Layang-Layang : " << kelilingLayang << endl;  
-    cout << "Keliling Belah Ketupat : " << kelilingBelah << endl;
 }
+
 int main() {
 //Lengkapi disini
 LayangLayang ObjectLayang;
 BelahKetupat ObjectBelah;
+
 ObjectLayang.inputData();  
 ObjectBelah.inputData();  
 
 cout << "\n--- Hasil luas ---" << endl;  
 cout << "Luas Layang-Layang     : " << ObjectLayang.hitungLuas() << endl;  
-cout << "Luas Belah Ketupat     : " << ObjectBelah.hitungLuas() << endl;
+cout << "Luas Belah Ketupat     : " << ObjectBelah.hitungLuas() << endl;  
+
+//Lengkapi disini  
+tampilkanKeliling(ObjectLayang, ObjectBelah);  
+
+return 0;
+
+}
+
