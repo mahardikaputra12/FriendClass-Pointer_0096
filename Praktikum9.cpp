@@ -4,3 +4,9 @@
 using namespace std;
 
 class BelahKetupat;
+class LayangLayang {
+private:
+
+public:
+
+};
