@@ -51,3 +51,12 @@ public:
     }
     
     friend void tampilkanKeliling(LayangLayang, BelahKetupat);
+    
+void tampilkanKeliling(LayangLayang l, BelahKetupat b) {
+    double kelilingLayang = 2 * (l.sisi1 + l.sisi2);
+    double kelilingBelah = 4 * b.sisi;
+
+    cout << "\n--- Keliling ---" << endl;  
+    cout << "Keliling Layang-Layang : " << kelilingLayang << endl;  
+    cout << "Keliling Belah Ketupat : " << kelilingBelah << endl;
+}
